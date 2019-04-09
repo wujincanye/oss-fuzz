@@ -24,7 +24,7 @@ BUILD_TIMEOUT = 12 * 60 * 60
 
 FUZZING_BUILD_TAG = 'fuzzing'
 
-GCB_LOGS_BUCKET = 'oss-fuzz-gcb-logs'
+GCB_LOGS_BUCKET = 'oss-fuzz-gcb-logs-test' #  'oss-fuzz-gcb-logs'
 
 CONFIGURATIONS = {
     'sanitizer-address': ['SANITIZER=address'],
@@ -64,8 +64,8 @@ ENGINE_INFO = {
             supported_sanitizers=['address']),
 }
 
-DEFAULT_ENGINES = ['libfuzzer', 'afl']
-DEFAULT_SANITIZERS = ['address', 'undefined']
+DEFAULT_ENGINES = ['dataflow'] #  ['libfuzzer', 'afl']
+DEFAULT_SANITIZERS = ['dataflow'] #  ['address', 'undefined']
 
 TARGETS_LIST_BASENAME = 'targets.list'
 
